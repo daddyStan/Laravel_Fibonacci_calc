@@ -21,6 +21,7 @@ class SequenceController extends BaseController
     {
         $position = $request->post('position');
 
-        return view('fibonacci',['position' => 'MOCK']);
+        $number = round(((sqrt(5)+1)/2) ** $position / sqrt(5));
+        return view('fibonacci',['position' => $number]);
     }
 }
