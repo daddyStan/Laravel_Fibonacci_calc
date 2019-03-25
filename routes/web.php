@@ -12,7 +12,6 @@
 */
 
 Route::get('/', function () { return view('welcome');});
-
 Route::post('fibonacci', 'SequenceController@calculate');
 Route::get('fibonacci', 'SequenceController@calculate');
 
