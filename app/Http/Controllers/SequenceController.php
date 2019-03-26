@@ -33,7 +33,8 @@ class SequenceController extends BaseController
     public function calculate(Request $request)
     {
         $position = (int) $request->post('position');
+        $isLoop = (bool)$request->post('check');
 
-        return view('fibonacci',['position' => $this->calculator->calculateByPosition($position)]);
+        return view('fibonacci',['position' =>  $this->calculator->calculateByPosition($position, $isLoop)]);
     }
 }

@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
 
         <!-- Styles -->
         <style>
@@ -32,12 +33,6 @@
 
             .position-ref {
                 position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
             }
 
             .content {
@@ -72,14 +67,20 @@
                     @endisset
                 </div>
 
-                <div class="title m-b-md">
-                    <form action="/fibonacci" method="post" name="position">
+                <div class=" m-b-md">
+                    <form action="/fibonacci" method="post" name="position" class="form-group">
                         <input type="hidden" name="_method" value="POST">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="number" name="position"/>
-                        <input type="submit" />
+                        <div class="form-check-label h3">
+                            <span class="text-capitalize text-xl-center">Формула/цикл (formula/loop)</span>
+                            <input type="checkbox" name="check" class="form-check-inline col-form-label-lg">
+                        </div>
+                        <input type="number" name="position" value="0" class="form-control-lg"/>
+                        <input type="submit" class="form-control-lg"/>
                     </form>
                 </div>
+
+
             </div>
         </div>
     </body>

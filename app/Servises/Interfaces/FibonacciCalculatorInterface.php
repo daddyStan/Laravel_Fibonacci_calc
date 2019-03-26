@@ -5,5 +5,5 @@ namespace App\Servises\Interfaces;
 
 interface FibonacciCalculatorInterface
 {
-    public function calculateByPosition(int $position): int ;
+    public function calculateByPosition(int $position, $isLoop) ;
 }
